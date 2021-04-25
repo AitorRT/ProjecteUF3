@@ -5,19 +5,19 @@
 
             <h1 class="my-4">New Video</h1>
 
-            <form action="{{route('video.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('video.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <input type="text" name="title" value="" placeholder="Title" class="form form-control" required>
-                <br/>
+                <br />
 
                 <input type="file" name="video" required>
 
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <input type="submit" class="btn btn-primary" value="Save">
-                <br/>
-                <br/>
+                <br />
+                <br />
             </form>
             </br>
         </div>

@@ -23,8 +23,8 @@ class ScoreController extends Controller
     {
         $users = User::all();
         $scores = Score::all();
-        $videos= Video::all();
-        return view('home',compact('users','videos','scores'));
+        $videos = Video::all();
+        return view('home', compact('users', 'videos', 'scores'));
     }
 
     /**
@@ -46,10 +46,12 @@ class ScoreController extends Controller
     public function store(Request $request)
     {
         Score::create(
-            ['score'=>$request->rating,
-                'user_id'=>$request->user_id,
-                'video_id'=>$request->video_id,
-            ]);
+            [
+                'score' => $request->rating,
+                'user_id' => $request->user_id,
+                'video_id' => $request->video_id,
+            ]
+        );
         return redirect()->route('score.index');
     }
 
@@ -70,9 +72,9 @@ class ScoreController extends Controller
      * @param  \App\Models\scores  $scores
      * @return \Illuminate\Http\Response
      */
-    public function edit( $id)
+    public function edit($id)
     {
-        $score=Score::find($id);
+        $score = Score::find($id);
         return redirect()->route('score.index');
     }
 
@@ -85,7 +87,6 @@ class ScoreController extends Controller
      */
     public function update(Request $request, scores $scores)
     {
-
     }
 
     /**

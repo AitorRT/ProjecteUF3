@@ -4,29 +4,29 @@
         <div class="col-lg-12">
 
             <h1 class="my-4">Videos edit</h1>
-            <form action="{{route('video.update',$video->id)}}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('video.update', $video->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <label for="title">Title</label>
-                <br/>
-                <input type="text" name="title" value="{{$video->title}}" class="form form-control">
+                <br />
+                <input type="text" name="title" value="{{ $video->title }}" class="form form-control">
 
-                <label for="video" >Video</label>
-                <br/>
+                <label for="video">Video</label>
+                <br />
                 <!--<input type="hidden" name="video" value="{$video->route}}">-->
                 <input type="file" name="video">
 
-            <!--<label for="route">Route</label>
-                <br/>
-                <input type="text" name="route" value="$video->route}}" class="form-select form-select-lg mb-3">-->
+                <!--<label for="route">Route</label>
+                    <br/>
+                    <input type="text" name="route" value="$video->route}}" class="form-select form-select-lg mb-3">-->
 
-                <br/>
+                <br />
                 <input type="submit" class="btn btn-primary" value="Save">
-                <br/>
-                <br/>
+                <br />
+                <br />
             </form>
 
-            <br/>
+            <br />
         </div>
     </section>
 

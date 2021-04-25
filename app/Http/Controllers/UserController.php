@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         $users = User::all();
         $videos = Video::all();
-        return view('admin',compact('users','videos'));
+        return view('admin', compact('users', 'videos'));
     }
 
     public function __construct()
@@ -45,15 +45,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->password != $request->password_confirmation){
-            abort(404,"Password don't match");
+        if ($request->password != $request->password_confirmation) {
+            abort(404, "Password don't match");
         }
         User::create(
-            ['name'=>$request->name,
-                'email'=>$request->email,
+            [
+                'name' => $request->name,
+                'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'role_id' => $request->role_id,
-            ]);
+            ]
+        );
         return redirect()->route('user.index');
     }
 
@@ -76,8 +78,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user=User::find($id);
-        return view('usersedit',compact('user'));
+        $user = User::find($id);
+        return view('usersedit', compact('user'));
     }
 
     /**
@@ -90,12 +92,12 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 
-        $user=user::find($id);
+        $user = user::find($id);
         $user->update([
 
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'role_id'=>$request->role_id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'role_id' => $request->role_id,
 
         ]);
 
