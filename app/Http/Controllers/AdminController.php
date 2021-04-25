@@ -23,8 +23,8 @@ class AdminController extends Controller
     public function index(Request $request)
     {
         $users = User::all();
-        $videos= Video::all();
-        return view('admin',compact('users','videos'));
+        $videos = Video::all();
+        return view('admin', compact('users', 'videos'));
     }
 
     /**

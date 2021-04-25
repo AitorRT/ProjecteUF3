@@ -28,8 +28,8 @@ class VideoController extends Controller
     public function index(Request $request)
     {
         $users = User::all();
-        $videos= Video::all();
-        return view('videos',compact('users','videos'));
+        $videos = Video::all();
+        return view('videos', compact('users', 'videos'));
     }
 
     /**
@@ -42,8 +42,6 @@ class VideoController extends Controller
         return view('videosnew');
     }
 
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -53,18 +51,20 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $users = User::all();
-        foreach ($users as $user){
-            if(Auth::user()->name == $user['name']){
+        foreach ($users as $user) {
+            if (Auth::user()->name == $user['name']) {
                 $userID = $user['id'];
             }
         }
 
-        $path = $request->file('video')->store('videos','public');
+        $path = $request->file('video')->store('videos', 'public');
         Video::create(
-            ['title'=>$request->title,
-            'route'=>$path,
-            'user_id'=>$userID
-        ]);
+            [
+                'title' => $request->title,
+                'route' => $path,
+                'user_id' => $userID
+            ]
+        );
         return redirect()->route('video.index');
     }
 
@@ -76,16 +76,16 @@ class VideoController extends Controller
      */
     public function show($id)
     {
-        $video=Video::find($id);
-        $users=User::all();
-        return view('videosview',compact('video','users'));
+        $video = Video::find($id);
+        $users = User::all();
+        return view('videosview', compact('video', 'users'));
     }
 
     public function score($id)
     {
-        $video=Video::find($id);
-        $users=User::all();
-        return view('videosscore',compact('video','users'));
+        $video = Video::find($id);
+        $users = User::all();
+        return view('videosscore', compact('video', 'users'));
     }
 
 
@@ -97,9 +97,9 @@ class VideoController extends Controller
      */
     public function edit($id)
     {
-        $video=Video::find($id);
-        $users=User::all();
-        return view('videosedit',compact('video','users'));
+        $video = Video::find($id);
+        $users = User::all();
+        return view('videosedit', compact('video', 'users'));
     }
 
     /**
@@ -112,16 +112,17 @@ class VideoController extends Controller
     public function update(Request $request, $id)
     {
 
-        $video=Video::find($id);
+        $video = Video::find($id);
 
-        if(!empty ($request->file('video'))){
-            $path = $request->file('video')->store('videos','public');
-        }else{
+        if (!empty($request->file('video'))) {
+            $path = $request->file('video')->store('videos', 'public');
+        } else {
             $path = $video->route;
         }
 
-        $video->update(['title'=>$request->title,
-            'route'=>$path,
+        $video->update([
+            'title' => $request->title,
+            'route' => $path,
         ]);
 
         return redirect()->route('video.index');

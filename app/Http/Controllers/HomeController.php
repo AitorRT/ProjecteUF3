@@ -16,7 +16,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -26,7 +25,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $videos= Video::all();
-        return view('home',compact('videos'));
+        $videos = Video::all();
+        return view('home', compact('videos'));
     }
 }

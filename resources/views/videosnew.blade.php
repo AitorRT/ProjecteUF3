@@ -11,7 +11,7 @@
                 <input type="text" name="title" value="" placeholder="Title" class="form form-control" required>
                 <br/>
 
-                <input type="file" name="video">
+                <input type="file" name="video" required>
 
                 <br/>
                 <br/>

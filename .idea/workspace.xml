@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bfac4f-e112-4935-92e6-81257c352f72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/banner.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/banner.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/megusta.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pic11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/usersedit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/videos.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/videosedit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/videosnew.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/videosscore.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/videosview.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Moodle/ejercicio1/calculadora/hola.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Moodle/ejercicio1/movies/hol2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +196,8 @@
       <workItem from="1614959476376" duration="5062000" />
       <workItem from="1615026604965" duration="7416000" />
       <workItem from="1615049979535" duration="10907000" />
-      <workItem from="1615144843624" duration="6097000" />
+      <workItem from="1615144843624" duration="9783000" />
+      <workItem from="1615825263106" duration="66000" />
     </task>
     <servers />
   </component>

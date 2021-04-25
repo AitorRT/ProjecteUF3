@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,13 +15,12 @@ class ProfileController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     public function index(Request $request)
     {
-        $users= User::all();
-        return view('profile',compact('users'));
+        $users = User::all();
+        return view('profile', compact('users'));
     }
 
     /**
@@ -63,9 +63,9 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        $user=User::find($id);
-        $users=User::all();
-        return view('profileedit',compact('user','users'));
+        $user = User::find($id);
+        $users = User::all();
+        return view('profileedit', compact('user', 'users'));
     }
 
     /**
@@ -77,9 +77,10 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user=User::find($id);
-        $user->update(['name'=>$request->name,
-            'email'=>$request->email,
+        $user = User::find($id);
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
         ]);
 
         return redirect()->route('profile.index');
